@@ -156,7 +156,7 @@ nav ul li a:hover::after {
 
 
 }
-/* 
+ 
 nav {
   display: flex;
   align-items: center;
@@ -208,7 +208,7 @@ nav ul li a:hover::after {
   width: 100%;
 
 
-} */
+} 
 
 .animate__animated.animate__slideInUp {
   --animate-duration: 4s;
@@ -3964,7 +3964,7 @@ span.text {
    }
 }
 
-/* @media(max-width: 505px) {
+@media(max-width: 505px) {
 
     .process-wrapperd {
         position: relative;
@@ -4038,7 +4038,72 @@ span.text {
 
 
 
-} */
+} 
+/* SIDEMENU (Mobile Menu) */
+#sidemenu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* hidden initially */
+  width: 250px;
+  height: 100vh;
+  background: #111; /* dark sidebar */
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  gap: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+/* SIDEMENU LINKS */
+#sidemenu li {
+  list-style: none;
+  width: 100%;
+}
+
+#sidemenu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+#sidemenu li a:hover {
+  color: #4dabf7;
+  padding-left: 10px;
+}
+
+/* CLOSE ICON */
+#sidemenu .fa-times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* MENU (hamburger icon) */
+nav .fa-bars {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  display: none; /* hidden on desktop */
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  nav .fa-bars {
+    display: block;
+  }
+  nav ul {
+    display: none; /* hide normal menu */
+  }
+}
+
 
 
 
